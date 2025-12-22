@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <title>Psichoterapeutė Jelena | Leisk sau</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Psichoterapeutė Jelena Vilniuje ir online. Nerimas, depresija, santykiai, porų terapija. Šilta, žmogiška erdvė, kur galite leisti sau būti savimi.">
+    <link rel="canonical" href="https://leisksau.lt/">
+    <style>
+        :root {
+            --bg: #f7f5f2;
+            --accent: #486b7a;
+            --accent-soft: #e2e8ec;
+            --text: #2d3436;
+            --muted: #636e72;
+            --white: #ffffff;
+            --max-width: 960px;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* --- HERO su video fone --- */
+        header {
+            position: relative;
+            min-height: 100vh;
+            color: #ffffff;
+        }
+        .hero-video-wrap {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .hero-video-wrap video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            filter: brightness(0.6);
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(0,0,0,0.1), rgba(0,0,0,0.45));
+            z-index: 1;
+        }
+        .header-inner {
+            position: relative;
+            z-index: 2;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+        .logo-text {
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #f7f5f2;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.4);
+            background-color: rgba(0,0,0,0.22);
+        }
+        .nav-links a {
+            margin-left: 16px;
+            font-size: 14px;
+            color: #f7f5f2;
+        }
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .hero {
+            padding: 100px 0 60px;
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            gap: 32px;
+            align-items: center;
+        }
+        .hero-title {
+            font-size: 38px;
+            font-weight: 500;
+            margin: 0 0 16px;
+        }
+        .hero-subtitle {
+            font-size: 18px;
+            color: #f1f2f6;
+            margin: 0 0 24px;
+        }
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+        .btn-primary {
+            background-color: #ffffff;
+            color: #2d3436;
+            padding: 12px 24px;
+            border-radius: 999px;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary:hover {
+            background-color: #f0f0f0;
+        }
+        .hero-note {
+            font-size: 13px;
+            color: #dfe6e9;
+        }
+        .hero-card {
+            background-color: rgba(0, 0, 0, 0.45);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .hero-card-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .hero-card-list {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 14px;
+            color: #ecf0f1;
+        }
+
+        /* Likęs puslapis */
+        section {
+            padding: 32px 0;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+        section:nth-of-type(even) {
+            background-color: #f0f3f5;
+        }
+        h2 {
+            font-size: 24px;
+            margin: 0 0 16px;
+        }
+        .two-cols {
+            display: grid;
+            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+            gap: 32px;
+        }
+        p { margin: 0 0 12px; }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        li { margin-bottom: 6px; }
+        .pill {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background-color: var(--accent-soft);
+            color: var(--muted);
+            font-size: 12px;
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
+        .service-block {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 16px;
+            border: 1px solid #e1e1e1;
+            margin-bottom: 12px;
+        }
+        .service-title {
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .contact-box {
+            background-color: var(--white);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid #e1e1e1;
+            max-width: 520px;
+        }
+        .contact-row {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        .contact-label {
+            font-weight: 500;
+        }
+        .small {
+            font-size: 13px;
+            color: var(--muted);
+        }
+        footer {
+            padding: 24px 0 32px;
+            font-size: 13px;
+            color: var(--muted);
+            background-color: #f0f3f5;
+        }
+        footer a { color: var(--muted); }
+        footer a:hover { color: var(--accent); }
+
+        @media (max-width: 768px) {
+            header {
+                min-height: 100vh;
+            }
+            .hero {
+                grid-template-columns: minmax(0, 1fr);
+                padding-top: 60px;
+            }
+            .two-cols {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- VIDEO FONAS: pasirūpink, kad hero.mp4 būtų šalia index.html -->
+    <div class="hero-video-wrap">
+        <video autoplay muted loop playsinline>
+            <source src="hero.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="header-inner">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo-text">LEISK SAU · PSICHOTERAPIJA</div>
+                <div class="nav-links">
+                    <a href="#apie">Apie</a>
+                    <a href="#su-kuo-dirbu">Su kuo dirbu</a>
+                    <a href="#paslaugos">Paslaugos</a>
+                    <a href="#kontaktai">Kontaktai</a>
+                </div>
+            </nav>
+
+            <div class="hero">
+                <div>
+                    <h1 class="hero-title">Psichoterapeutė Jelena – erdvė, kur galite leisti sau būti savimi</h1>
+                    <p class="hero-subtitle">
+                        Padedu su nerimu, depresija, santykių sunkumais ir porų krizėmis, gyvai Vilniuje ir online.
+                    </p>
+                    <div class="hero-cta">
+                        <a class="btn-primary" href="#kontaktai">Susisiekti</a>
+                        <span class="hero-note">
+                            35–60 min. seansas, kaina sutartinė.
+                        </span>
+                    </div>
+                </div>
+                <aside class="hero-card">
+                    <div class="hero-card-title">Su kuo dažniausiai kreipiasi</div>
+                    <ul class="hero-card-list">
+                        <li>Nuolatinis nerimas, įtampa, sunku atsipalaiduoti.</li>
+                        <li>Nuotaikos kritimas, išsekimas, beviltiškumo jausmas.</li>
+                        <li>Konfliktai, atitolimas, kartojasi tie patys santykių scenarijai.</li>
+                        <li>Porų krizės, neištikimybė, pokyčiai santykyje.</li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section id="apie">
+        <div class="container two-cols">
+            <div>
+                <h2>Apie Jeleną</h2>
+                <p>
+                    Esu psichoterapeutė Jelena, dirbanti su suaugusiais ir poromis, išgyvenančiais nerimą, depresiją,
+                    santykių krizes ar vidinį pasimetimą. Mano tikslas – sukurti saugią, jaukią ir pagarbą puoselėjančią
+                    erdvę, kurioje galite kalbėti apie tai, kas iš tiesų rūpi, be vertinimo ir kaukių.
+                </p>
+                <p>
+                    Savo darbe remiuosi skirtingų krypčių psichoterapija – psichodinaminiu požiūriu, kognityvine elgesio terapija (KET),
+                    geštalto, egzistencine ir integratyvia terapija. Tai leidžia derinti metodus prie jūsų istorijos ir
+                    dabartinių poreikių, o ne bandyti jus sutalpinti į vieną schemą.
+                </p>
+            </div>
+            <div>
+                <p class="small">
+                    „Kreiptis galima ir tada, kai dar ne taip blogai, bet jaučiate, kad vieniems nebesinori ar
+                    nebesigauna.“
+                </p>
+                <div>
+                    <span class="pill">Nerimas</span>
+                    <span class="pill">Depresija</span>
+                    <span class="pill">Santykiai</span>
+                    <span class="pill">Porų terapija</span>
+                    <span class="pill">Psichodinaminė</span>
+                    <span class="pill">KET</span>
+                    <span class="pill">Geštalto</span>
+                    <span class="pill">Egzistencinė</span>
+                    <span class="pill">Integratyvi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="su-kuo-dirbu">
+        <div class="container">
+            <h2>Su kuo dažniausiai dirbu</h2>
+            <p>
+                Jei neatpažinote savęs šiame sąraše, bet jaučiate, kad viduje sunku – taip pat esate laukiami.
+            </p>
+            <ul>
+                <li><strong>Nerimas ir įtampa.</strong> Nuolatinis vidinis nerimas, įkyrios mintys, sunku atsipalaiduoti ar užmigti.</li>
+                <li><strong>Depresyvi nuotaika ir išsekimas.</strong> Vargina nuotaikų svyravimai, bejėgiškumo ar beprasmybės jausmas.</li>
+                <li><strong>Santykių sunkumai.</strong> Konfliktai, atitolimas, pavydas, sunku nustatyti ribas ar rinktis save santykyje.</li>
+                <li><strong>Porų krizės.</strong> Išsiskyrimo grėsmė, neištikimybė, pokyčiai (vaiko gimimas, emigracija, netektis), kai reikia saugios erdvės išgirsti vienam kitą.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="kaip-padeda">
+        <div class="container two-cols">
+            <div>
+                <h2>Kaip gali padėti terapija</h2>
+                <p>
+                    Terapijoje kartu geriau suprasime, kas vyksta jūsų viduje – jausmuose, mintyse ir kūne. Ieškosime
+                    jūsų patyrimuose susiformavusių modelių, kurie šiandien kelia skausmą.
+                </p>
+                <p>
+                    Galėsite mokytis atpažinti ir įvardinti savo jausmus, poreikius ir ribas, ieškoti kitokių, labiau jus
+                    palaikančių būdų būti santykyje su savimi ir kitais.
+                </p>
+            </div>
+            <div>
+                <p>
+                    Porų terapijoje svarbiausia ne surasti kaltą, o išgirsti vienas kitą, pamatyti pasikartojantį konfliktų ratą
+                    ir atrasti naujų būdų kalbėtis, išlaikant pagarbą ir ryšį.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="paslaugos">
+        <div class="container">
+            <h2>Paslaugos ir darbo forma</h2>
+
+            <div class="service-block">
+                <div class="service-title">Individuali terapija suaugusiems</div>
+                <p>
+                    Trukmė: 35–60 min. Konsultacijos vyksta gyvai Vilniuje arba online vaizdo skambučiu.
+                    Dažniausiai susitinkame kartą per savaitę, tačiau dažnumą galime derinti individualiai.
+                </p>
+            </div>
+
+            <div class="service-block">
+                <div class="service-title">Porų terapija</div>
+                <p>
+                    Trukmė: 50–60 min. Susitikimai gali vykti gyvai Vilniuje arba online, jei abiem partneriams tai patogu.
+                    Svarbiausia – saugi erdvė atviram dialogui ir bendram ieškojimui, kas jums tinka šiame santykio etape.
+                </p>
+            </div>
+
+            <div class="service-block">
+                <div class="service-title">Trumpoji ir ilgalaikė terapija</div>
+                <p>
+                    Trumpalaikė terapija (pvz., 8–12 susitikimų) tinka aiškiau apibrėžtai problemai ar konkrečiam gyvenimo etapui.
+                    Ilgalaikė terapija skirta gilesniems, ilgai besitęsiantiems sunkumams, savęs pažinimui ir santykių modelių keitimui.
+                </p>
+            </div>
+
+            <p><strong>Kaina.</strong> Seanso trukmė 35–60 min., kaina – sutartinė. Apie kainą susitariame individualiai, atsižvelgiant į jūsų situaciją ir galimybes.</p>
+            <p><strong>Kalbos.</strong> Konsultuoju lietuvių ir rusų kalbomis.</p>
+        </div>
+    </section>
+
+    <section id="kontaktai">
+        <div class="container">
+            <h2>Kontaktai ir registracija</h2>
+            <div class="two-cols">
+                <div>
+                    <p>
+                        Jei pirmą kartą kreipiatės į psichoterapeutą ir jaučiatės nedrąsiai, galite tiesiog parašyti:
+                        „Noriu pasikonsultuoti, bet nežinau, nuo ko pradėti“ – pradėsime nuo ten, kur esate.
+                    </p>
+                    <div class="contact-box">
+                        <div class="contact-row">
+                            <span class="contact-label">Telefonas:</span>
+                            <a href="tel:+37067090707">+370 670 90707</a>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-label">El. paštas:</span>
+                            <a href="mailto:jelena@leisksau.lt">jelena@leisksau.lt</a>
+                        </div>
+                        <div class="contact-row small">
+                            Geriausia – parašyti SMS arba el. laišką trumpai apibūdinant, kuo šiuo metu gyvenate ir kokios pagalbos ieškote.
+                            Atsakysiu ir pasiūlysiu galimus laikus pirmajam susitikimui.
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="small">
+                        Puslapis sukurtas informaciniais tikslais ir nepakeičia skubios medicininės ar psichiatrinės pagalbos.
+                        Jei jaučiate, kad jūsų ar kitų saugumas yra pavojuje, kreipkitės į skubios pagalbos tarnybas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div>© <span id="year"></span> Leisk sau · Psichoterapeutė Jelena</div>
+        <div class="small">
+            Svetainė: leisksau.lt. Privatumo politika ir duomenų apsauga bus papildyta.
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
