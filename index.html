@@ -94,7 +94,7 @@
         }
 
         .hero {
-            padding: 100px 0 60px;
+            padding: 20px 0 10px;
             display: grid;
             grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
             gap: 32px;
@@ -272,10 +272,12 @@
 
             <div class="hero">
                 <div>
-                    <h1 class="hero-title">Psichoterapeutė Jelena – erdvė, kur galite leisti sau būti savimi</h1>
+                    <h1 class="hero-title"><div>Leisk sau – psichoterapijos erdvė</div></h1>
                     <p class="hero-subtitle">
-                        Padedu su nerimu, depresija, santykių sunkumais ir porų krizėmis, gyvai Vilniuje ir online.
+                        Tai vieta, kur gali sustoti, įsiklausyti ir susidėlioti tai, kas viduje per ilgai buvo nustumta į šoną. Čia nereikia „būti stipriai“, nereikia visko paaiškinti gražiai ar logiškai. Galima ateiti su chaosu, nuovargiu, nerimu, ašaromis, tylėjimu ar net nežinojimu „nuo ko pradėti“.
+
                     </p>
+                    <p class="hero-subtitle"></p>
                     <div class="hero-cta">
                         <a class="btn-primary" href="#kontaktai">Susisiekti</a>
                         <span class="hero-note">
@@ -283,16 +285,21 @@
                         </span>
                     </div>
                 </div>
-                <aside class="hero-card">
-                    <div class="hero-card-title">Su kuo dažniausiai kreipiasi</div>
-                    <ul class="hero-card-list">
-                        <li>Nuolatinis nerimas, įtampa, sunku atsipalaiduoti.</li>
-                        <li>Nuotaikos kritimas, išsekimas, beviltiškumo jausmas.</li>
-                        <li>Konfliktai, atitolimas, kartojasi tie patys santykių scenarijai.</li>
-                        <li>Porų krizės, neištikimybė, pokyčiai santykyje.</li>
-                    </ul>
-                </aside>
             </div>
+            <aside class="hero-card">
+                <h1>Su kuo dažniausiai kreipiamasi?</h1>
+                <ul class="hero-card-list">
+                    <li><div>Nerimas, įtampa, panikos epizodai, „galvoje nuolat sukasi mintys“</div></li>
+                    <li><div>Perdegimas, emocinis nuovargis, „nebeturiu jėgų“, viskas erzina</div></li>
+                    <li><div>Liūdesys, prislėgta nuotaika, tuštumos jausmas, motyvacijos stoka</div></li>
+                    <li><div>Savigrauža, kaltė, gėda, savikritika, perfekcionizmas</div></li>
+                    <li><div><div>Santykių sunkumai: pavydas, kontrolė, konfliktai, ribos, priklausomybės nuo kito</div></div></li>
+                    <li><div><div>Sunkumai pasakyti „ne“, žmonių įtikinėjimas, „turiu visiems įtikti“</div></div></li>
+                    <li><div><div>Savivertė ir tapatumas: „nežinau ko noriu“, „pamečiau save“, „nemoku rinktis“</div></div></li>
+                    <li><div><div><div>Pokyčių laikotarpiai: skyrybos, netektys, persikraustymas, motinystė/tėvystė, krizės</div></div></div></li>
+                    <li><div><div><div><div>Vidinis nerimas dėl sveikatos, hiperkontrolė, baimės, sunkumas nusiraminti</div></div></div></div></li>
+                </ul>
+            </aside>
         </div>
     </div>
 </header>
@@ -304,13 +311,12 @@
             <div>
                 <h2>Apie Jeleną</h2>
                 <p>
-                    Esu psichoterapeutė Jelena, dirbanti su suaugusiais ir poromis, išgyvenančiais nerimą, depresiją,
+                    Esu psichoterapeutė Jelena, dirbanti su suaugusiais, išgyvenančiais nerimą, depresiją,
                     santykių krizes ar vidinį pasimetimą. Mano tikslas – sukurti saugią, jaukią ir pagarbą puoselėjančią
                     erdvę, kurioje galite kalbėti apie tai, kas iš tiesų rūpi, be vertinimo ir kaukių.
                 </p>
                 <p>
-                    Savo darbe remiuosi skirtingų krypčių psichoterapija – psichodinaminiu požiūriu, kognityvine elgesio terapija (KET),
-                    geštalto, egzistencine ir integratyvia terapija. Tai leidžia derinti metodus prie jūsų istorijos ir
+                    Savo darbe remiuosi kognityvine elgesio terapija (KET), schemų terapijos metodika. Tai leidžia derinti metodus prie jūsų istorijos ir
                     dabartinių poreikių, o ne bandyti jus sutalpinti į vieną schemą.
                 </p>
             </div>
@@ -323,12 +329,7 @@
                     <span class="pill">Nerimas</span>
                     <span class="pill">Depresija</span>
                     <span class="pill">Santykiai</span>
-                    <span class="pill">Porų terapija</span>
-                    <span class="pill">Psichodinaminė</span>
                     <span class="pill">KET</span>
-                    <span class="pill">Geštalto</span>
-                    <span class="pill">Egzistencinė</span>
-                    <span class="pill">Integratyvi</span>
                 </div>
             </div>
         </div>
@@ -336,15 +337,24 @@
 
     <section id="su-kuo-dirbu">
         <div class="container">
-            <h2>Su kuo dažniausiai dirbu</h2>
-            <p>
-                Jei neatpažinote savęs šiame sąraše, bet jaučiate, kad viduje sunku – taip pat esate laukiami.
-            </p>
+            <h2><div>Kaip vyksta konsultacija?</div></h2>
+            <p>Pirmas susitikimas:</p>
             <ul>
-                <li><strong>Nerimas ir įtampa.</strong> Nuolatinis vidinis nerimas, įkyrios mintys, sunku atsipalaiduoti ar užmigti.</li>
-                <li><strong>Depresyvi nuotaika ir išsekimas.</strong> Vargina nuotaikų svyravimai, bejėgiškumo ar beprasmybės jausmas.</li>
-                <li><strong>Santykių sunkumai.</strong> Konfliktai, atitolimas, pavydas, sunku nustatyti ribas ar rinktis save santykyje.</li>
-                <li><strong>Porų krizės.</strong> Išsiskyrimo grėsmė, neištikimybė, pokyčiai (vaiko gimimas, emigracija, netektis), kai reikia saugios erdvės išgirsti vienam kitą.</li>
+                <li>trumpai susipažinti;</li>
+                <li>išgirsti, kas šiuo metu sunkiausia;</li>
+                <li>nustatyti terapijos tikslus;</li>
+                <li>sudaryti sesijų planą.</li>
+            </ul>
+        </div>
+        <div class="container">
+            <h2></h2>
+            <p>Toliau dirbame taip, kad būtų ne tik „išsikalbėjimas“, bet ir:</p>
+            <ul>
+                <li>aiškiau suprasti, kas su manimi vyksta;</li>
+                <li>atpažinti pasikartojančius modelius (mintys–emocijos–elgesys);</li>
+                <li><div>išmokti konkrečių įrankių: ribos, emocijų reguliavimas, nerimo mažinimas;</div></li>
+                <li><div>stiprinti savivertę ir vidinę atramą;</div></li>
+                <li><div>po truputį keisti tai, kas nebeveikia.</div></li>
             </ul>
         </div>
     </section>
@@ -352,21 +362,16 @@
     <section id="kaip-padeda">
         <div class="container two-cols">
             <div>
-                <h2>Kaip gali padėti terapija</h2>
-                <p>
-                    Terapijoje kartu geriau suprasime, kas vyksta jūsų viduje – jausmuose, mintyse ir kūne. Ieškosime
-                    jūsų patyrimuose susiformavusių modelių, kurie šiandien kelia skausmą.
-                </p>
-                <p>
-                    Galėsite mokytis atpažinti ir įvardinti savo jausmus, poreikius ir ribas, ieškoti kitokių, labiau jus
-                    palaikančių būdų būti santykyje su savimi ir kitais.
-                </p>
-            </div>
-            <div>
-                <p>
-                    Porų terapijoje svarbiausia ne surasti kaltą, o išgirsti vienas kitą, pamatyti pasikartojantį konfliktų ratą
-                    ir atrasti naujų būdų kalbėtis, išlaikant pagarbą ir ryšį.
-                </p>
+                <h2><div>Ko gali tikėtis po kelių susitikimų?</div></h2>
+                <p></p>
+                    <ul>
+                    <li><div>mažiau įtampos ir minčių „užsisukimo“,</div></li>
+                    <li><div>aiškesnį supratimą, kas su jais vyksta,</div></li>
+                    <li><div><div>daugiau vidinės ramybės ir stabilumo,</div></div></li>
+                    <li><div><div>drąsesnes ribas ir mažiau kaltės,</div></div></li>
+                    <li><div><div>didesnį pasitikėjimą savimi ir pasirinkimais.</div></div></li>
+                </ul>
+                <p></p>
             </div>
         </div>
     </section>
@@ -378,18 +383,11 @@
             <div class="service-block">
                 <div class="service-title">Individuali terapija suaugusiems</div>
                 <p>
-                    Trukmė: 35–60 min. Konsultacijos vyksta gyvai Vilniuje arba online vaizdo skambučiu.
+                    Trukmė: 50 min. Konsultacijos vyksta gyvai Vilniuje arba online vaizdo skambučiu.
                     Dažniausiai susitinkame kartą per savaitę, tačiau dažnumą galime derinti individualiai.
                 </p>
             </div>
 
-            <div class="service-block">
-                <div class="service-title">Porų terapija</div>
-                <p>
-                    Trukmė: 50–60 min. Susitikimai gali vykti gyvai Vilniuje arba online, jei abiem partneriams tai patogu.
-                    Svarbiausia – saugi erdvė atviram dialogui ir bendram ieškojimui, kas jums tinka šiame santykio etape.
-                </p>
-            </div>
 
             <div class="service-block">
                 <div class="service-title">Trumpoji ir ilgalaikė terapija</div>
@@ -399,7 +397,7 @@
                 </p>
             </div>
 
-            <p><strong>Kaina.</strong> Seanso trukmė 35–60 min., kaina – sutartinė. Apie kainą susitariame individualiai, atsižvelgiant į jūsų situaciją ir galimybes.</p>
+            <p><strong>Kaina.</strong>&nbsp;33 Eur.</p>
             <p><strong>Kalbos.</strong> Konsultuoju lietuvių ir rusų kalbomis.</p>
         </div>
     </section>
@@ -415,15 +413,11 @@
                     </p>
                     <div class="contact-box">
                         <div class="contact-row">
-                            <span class="contact-label">Telefonas:</span>
-                            <a href="tel:+37060534157">+370 605 34 157</a>
-                        </div>
-                        <div class="contact-row">
                             <span class="contact-label">El. paštas:</span>
                             <a href="mailto:jelena.reketiene@gmail.com">jelena.reketiene@gmail.com</a>
                         </div>
                         <div class="contact-row small">
-                            Geriausia – parašyti SMS arba el. laišką trumpai apibūdinant, kuo šiuo metu gyvenate ir kokios pagalbos ieškote.
+                            Geriausia – parašyti el. laišką trumpai apibūdinant, kuo šiuo metu gyvenate ir kokios pagalbos ieškote.
                             Atsakysiu ir pasiūlysiu galimus laikus pirmajam susitikimui.
                         </div>
                     </div>
